@@ -3,6 +3,7 @@ import 'antd/dist/antd.css';
 import '../style/header.css';
 import { Modal, Button, Form, Input } from 'antd';
 
+// TODO GTB-工程实践: - 整个文件有Eslint错误
 class StudentList extends Component {
   state = { 
     visible: false,
@@ -22,6 +23,7 @@ class StudentList extends Component {
   };
 
   onFinish = values => {
+    // TODO GTB-工程实践: - API请求的需要抽取到独立的文件
     fetch('http://localhost:8080/student', {
       headers: {
         'Content-Type': 'application/json'
@@ -39,7 +41,9 @@ class StudentList extends Component {
     });
   };
 
-  render() {   
+  // TODO GTB-完成度: - 虽然你使用了modal和form实现了添加学生的功能，但是这个与实际的需求不符合，所以这一块的功能算是没有实现需求。
+  //  这一点需要注意，到了项目上只有满足了AC和mockup的才算是通过验收的。
+  render() {
     return (
       <div className="student-list">
         {
